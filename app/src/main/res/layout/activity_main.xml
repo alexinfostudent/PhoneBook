@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:gravity="center"
+            android:paddingTop="65dp"
+            android:text="PHONE"
+            android:textColor="#26FA01"
+            android:textSize="36sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="145dp"
+            android:layout_height="145dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/gm" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:paddingTop="0dp"
+            android:text="BOOK"
+            android:textColor="#015CFA"
+            android:textSize="36sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/nameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите имя"/>
+
+    <EditText
+        android:id="@+id/numberText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите номер"
+        android:inputType="phone"
+        android:keyboardNavigationCluster="false" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:text="Добавить контакт"
+        android:background="#32EECE00"
+        android:onClick="addPhone"/>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:background="#DAE1FD"
+        android:divider="@android:color/black"
+        android:dividerHeight="0.6dp"
+        android:headerDividersEnabled="false"
+        android:textFilterEnabled="false" >
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_gravity="left"
+        android:layout_height="43dp"
+        android:background="#80202BFD"
+        android:text="Сохранить данные"
+        android:onClick="save" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_gravity="right"
+        android:layout_height="43dp"
+        android:background="#854FFD28"
+        android:text="Открыть сохраненные данные"
+        android:onClick="open" />
+    </LinearLayout>
+
+</LinearLayout>
+
+
